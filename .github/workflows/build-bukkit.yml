@@ -20,8 +20,8 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build Bukkit module
-        run: ./gradlew :Bukkit:build --no-daemon
+      - name: Build all modules
+        run: ./gradlew build --no-daemon
 
       - name: Upload Bukkit jar
         uses: actions/upload-artifact@v4
